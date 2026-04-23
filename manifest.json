@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Note Sidebar",
+  "version": "1.0",
+
+  "permissions": ["storage"],
+
+  "host_permissions": ["<all_urls>"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_title": "Note"
+  }
+}
